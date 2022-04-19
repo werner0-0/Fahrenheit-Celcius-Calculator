@@ -1,0 +1,24 @@
+<h1>Temperature Converter App</h1>
+<div class="temp">
+  <form [formGroup]="tconv" (ngSubmit)="onFormSubmit(input_value.value)">
+    <input type="number" #input_value style="padding: 10px;">
+    <pre></pre>
+    <div class="Centigrade">
+      <input type="radio" #radio_value formControlName = "celcius"
+      value="Celcius">
+      <label style="font-size: 20px;">Convert To Celcius</label>
+    </div>
+    <pre></pre>
+    <div class="Farenheit">
+      <input type="radio" #radio_value_2 formControlName = "fahren"
+      value="Fahrenheit">
+      <label style="font-size: 20px;">Convert To Farenheit</label>
+    </div>
+    <pre></pre>
+    <button style="font-size: 20px;">
+      Submit
+    </button>
+    <pre></pre>
+    <input type="number" readonly style="padding: 10px;" formControlName = "result">
+  </form>
+</div>
